@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌐 API Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>🌐 API Dashboard</h1>
+
+<div class="grid">
+
+  <div class="card">
+    <h2>🐶 Dog</h2>
+    <button onclick="getDog()">Get Dog</button>
+    <img id="dogImg">
+  </div>
+
+  <div class="card">
+    <h2>🐱 Cat</h2>
+    <button onclick="getCat()">Get Cat</button>
+    <img id="catImg">
+  </div>
+
+  <div class="card">
+    <h2>🌦️ Weather</h2>
+    <button onclick="getWeather()">Get Weather</button>
+    <p id="weather"></p>
+  </div>
+
+  <div class="card">
+    <h2>💱 Currency</h2>
+    <button onclick="getCurrency()">USD → EUR</button>
+    <p id="currency"></p>
+  </div>
+
+  <div class="card">
+    <h2>🎬 Movies</h2>
+    <button onclick="getMovies()">Trending</button>
+    <div id="movies"></div>
+  </div>
+
+  <div class="card">
+    <h2>👤 GitHub</h2>
+    <input id="githubUser" placeholder="Enter username">
+    <button onclick="getGitHub()">Search</button>
+    <div id="github"></div>
+  </div>
+
+  <div class="card">
+    <h2>😂 Joke</h2>
+    <button onclick="getJoke()">Get Joke</button>
+    <p id="joke"></p>
+  </div>
+
+  <div class="card">
+    <h2>🌍 Country</h2>
+    <button onclick="getCountry()">Random Country</button>
+    <div id="country"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
