@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>😂 Random Joke Generator</title>
+  <link rel="stylesheet" href="joke-styles.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <h1>😂 Random Joke Generator</h1>
+    
+    <div class="joke-display">
+      <p id="jokeText">Click the button to generate a joke!</p>
+    </div>
+
+    <div class="button-group">
+      <button onclick="getRandomJoke()" class="btn-primary">Get Joke</button>
+      <button onclick="copyToClipboard()" class="btn-secondary">📋 Copy</button>
+      <button onclick="shareJoke()" class="btn-secondary">📤 Share</button>
+    </div>
+
+    <div class="category-select">
+      <label for="category">Choose Category:</label>
+      <select id="category">
+        <option value="Any">Any</option>
+        <option value="General">General</option>
+        <option value="Programming">Programming</option>
+        <option value="Knock-Knock">Knock-Knock</option>
+      </select>
+      <button onclick="getJokeByCategory()" class="btn-category">Get Category Joke</button>
+    </div>
+
+    <div class="joke-info">
+      <p id="jokeInfo"></p>
+    </div>
+  </div>
+</div>
+
+<script src="joke-script.js"></script>
+
+</body>
+</html>
