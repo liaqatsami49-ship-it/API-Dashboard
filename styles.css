@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  padding: 20px;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Glow border effect */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(120deg, #38bdf8, #a78bfa, #22c55e);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Hover lift */
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Card header */
+h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Buttons */
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Inputs */
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Images */
+img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+/* Text sections */
+p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 1;
+  line-height: 1.5;
+}
+
+div[id^="dog"],
+div[id^="cat"],
+div[id^="weather"],
+div[id^="currency"],
+div[id^="movies"],
+div[id^="github"],
+div[id^="joke"],
+div[id^="country"] {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scrollbar (extra polish) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  input {
+    width: 100%;
+  }
+}
